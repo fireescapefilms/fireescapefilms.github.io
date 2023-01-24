@@ -2,3 +2,5 @@
 site/.bundle/
 site/vendor/
 _site/
+vendor/
+.bundle/
