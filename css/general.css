@@ -136,7 +136,7 @@ body {
 .heading-secondary,
 .heading-tertiary {
   font-weight: 700;
-  color: #333;
+  color: #000000;
   /* color: #45260a; */
   /* color: #343a40; */
   letter-spacing: -0.5px;
@@ -162,9 +162,9 @@ body {
 
 .subheading {
   display: block;
-  font-size: 1.6rem;
+  font-size: 2.0rem;
   font-weight: 500;
-  color: #cf711f;
+  color: #b51515;
   text-transform: uppercase;
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
@@ -193,24 +193,24 @@ body {
 
 .btn--full:link,
 .btn--full:visited {
-  background-color: #e67e22;
+  background-color: #b51515;
   color: #fff;
 }
 
 .btn--full:hover,
 .btn--full:active {
-  background-color: #cf711f;
+  background-color: #cd7e7e;
 }
 
 .btn--outline:link,
 .btn--outline:visited {
   background-color: #fff;
-  color: #555;
+  color: #000;
 }
 
 .btn--outline:hover,
 .btn--outline:active {
-  background-color: #fdf2e9;
+  background-color: #e9c4c4;
 
   /* border: 3px solid #fff; */
 
@@ -233,7 +233,7 @@ body {
 .link:link,
 .link:visited {
   display: inline-block;
-  color: #e67e22;
+  color: #b51515;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -242,7 +242,7 @@ body {
 
 .link:hover,
 .link:active {
-  color: #cf711f;
+  color: #b51515;
   border-bottom: 1px solid transparent;
 }
 

@@ -56,18 +56,18 @@ title: Fire Escape Films
   <body>
     <header class="header">
       <a href="#">
-        <img class="logo" alt="Fire Escape Films logo" src="image/fe-logo-black.png" />
+        <img class="logo" alt="Fire Escape Films logo" src="image/fe-logo-white.png" />
       </a>
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#how">How it works</a></li>
-          <li><a class="main-nav-link" href="#meals">Student Films</a></li>
-          <li>
+          <li><a class="main-nav-link" href="#how">Get Involved</a></li>
+          <li><a class="main-nav-link" href="#meals">Our Films</a></li>
+          {{/* <li>
             <a class="main-nav-link" href="#testimonials">Testimonials</a>
-          </li>
+          </li> */}}
           <li><a class="main-nav-link" href="#equipment">Equipments</a></li>
-          <li><a class="main-nav-link nav-cta" href="#cta">Join Us</a></li>
+          <li><a class="main-nav-link nav-cta" href="#cta">Contact</a></li>
         </ul>
       </nav>
 
@@ -81,7 +81,7 @@ title: Fire Escape Films
       <section class="section-hero">
         <div class="hero">
           <div class="hero-text-box">
-            <h1 class="heading-primary">
+            <h1 class="heading-primary" id="first-heading">
               Make a movie this quarter with Fire Escape Films!
             </h1>
             <p class="hero-description">
@@ -93,7 +93,7 @@ title: Fire Escape Films
             >
 
             <a href="#how" class="btn btn--outline">Learn more &darr;</a>
-            <div class="delivered-meals">
+            {{/* <div class="delivered-meals">
               <div class="delivered-imgs">
                 <img src="img/customers/customer-1.jpg" alt="Customer photo" />
                 <img src="img/customers/customer-2.jpg" alt="Customer photo" />
@@ -105,7 +105,7 @@ title: Fire Escape Films
               <p class="delivered-text">
                 <span>200+</span> students participated in filmmaking last year!
               </p>
-            </div>
+            </div> */}}
           </div>
           <div class="hero-img-box">
             <picture>
@@ -120,7 +120,7 @@ title: Fire Escape Films
         </div>
       </section>
 
-      <section class="section-featured">
+      {{/* <section class="section-featured">
         <div class="container">
           <h2 class="heading-featured-in">As featured in</h2>
           <div class="logos">
@@ -137,7 +137,7 @@ title: Fire Escape Films
             <img src="img/logos/usa-today.png" alt="USA Today logo" />
           </div>
         </div>
-      </section>
+      </section> */}}
 
       <section class="section-how" id="how">
         <div class="container">
@@ -152,12 +152,11 @@ title: Fire Escape Films
           <div class="step-text-box">
             <p class="step-number">01</p>
             <h3 class="heading-tertiary">
-              Subscribe to our email newsletter!
+              Sign up for our emails and follow our socials!
             </h3>
             <p class="step-description">
-              We use emails to send you the latest updates on our production cyles, and it is essential for you to be able to join a crew in time.
-              We are still developing this website to ensure you can subscribe from the form below.
-
+              Sign up for meeting reminders by filling out the contact form and
+              follow us on Instagram abd Facebook for updates.
             </p>
           </div>
 
@@ -181,8 +180,8 @@ title: Fire Escape Films
             <p class="step-number">02</p>
             <h3 class="heading-tertiary">Come to our first general meeting!</h3>
             <p class="step-description">
-              At the beginning of each quarter, we will host a general meeting for directors to share their production needs and for you to sign up as a crew member.
-              The first meeting is VERY IMPORTANT for anyone who wants to participate in one of Fire Escape Films' productions.
+              At the beginning of each quarter, we will host a general meeting for directors to share their production needs and for you to sign up for crews.
+              The first meeting is VERY IMPORTANT for anyone who wants to participate in a Fire Escape Film.
             </p>
           </div>
 
@@ -191,8 +190,7 @@ title: Fire Escape Films
             <p class="step-number">03</p>
             <h3 class="heading-tertiary">Start working with your crew!</h3>
             <p class="step-description">
-              After talking to the director during the first general meeting, you should have exchanged contact information with your crew members.
-              And yes, you can start working on your film production!
+              After talking to a director and signing up for a crew, you can start working on your film production!
             </p>
           </div>
           <div class="step-img-box">
@@ -209,7 +207,7 @@ title: Fire Escape Films
         <div class="container center-text">
           <span class="subheading">Student Films</span>
           <h2 class="heading-secondary">
-            Students made <span>100+</span> short films in the past!
+            Autumn Quarter Productions
           </h2>
         </div>
 
@@ -289,7 +287,7 @@ title: Fire Escape Films
         </div>
       </section>
 
-      <section class="section-testimonials" id="testimonials">
+      {{/* <section class="section-testimonials" id="testimonials">
         <div class="testimonials-container">
           <span class="subheading">Testimonials</span>
           <h2 class="heading-secondary">Once you try it, you'll fall in love</h2>
@@ -420,13 +418,13 @@ title: Fire Escape Films
             />
           </figure>
         </div>
-      </section>
+      </section> */}}
 
       <section class="section-equipment" id="equipment">
         <div class="container">
           <span class="subheading" id="equipment-title">Equipment</span>
           <h2 class="heading-secondary">
-            Gears are available from the Logan Center!
+            Logan Center Equipment
           </h2>
         </div>
 
@@ -525,15 +523,8 @@ title: Fire Escape Films
                 </div>
 
                 <div>
-                  <label for="select-where">Where did you hear from us?</label>
-                  <select id="select-where" name="select-where" required>
-                    <option value="">Please choose one option:</option>
-                    <option value="friends">Friends and family</option>
-                    <option value="youtube">YouTube video</option>
-                    <option value="podcast">Podcast</option>
-                    <option value="ad">Facebook ad</option>
-                    <option value="others">Others</option>
-                  </select>
+                  <label for="additional-info">Additional Information</label>
+                  <input id="additional-info" name="additional-words" />
                 </div>
 
                 <button class="btn btn--form">Sign up now</button>
@@ -556,7 +547,7 @@ title: Fire Escape Films
       <div class="container grid grid--footer">
         <div class="logo-col">
           <a href="#" class="footer-logo">
-            <img class="logo" alt="Fire Escape Films logo" src="image/fe-logo-black.png" />
+            <img class="logo" alt="Fire Escape Films logo" src="image/fe-logo-white.png" />
           </a>
 
           <ul class="social-links">
@@ -596,31 +587,15 @@ title: Fire Escape Films
         </div>
 
         <nav class="nav-col">
-          <p class="footer-heading">Account</p>
-          <ul class="footer-nav">
-            <li><a class="footer-link" href="#cta">Create account</a></li>
-            <li><a class="footer-link" href="#cta">Sign in</a></li>
-          </ul>
-        </nav>
-
-        <nav class="nav-col">
-          <p class="footer-heading">Company</p>
-          <ul class="footer-nav">
-            <li><a class="footer-link" href="#">About Fire Escape Films</a></li>
-            <li><a class="footer-link" href="#">For Business</a></li>
-            <li><a class="footer-link" href="#">Careers</a></li>
-          </ul>
-        </nav>
-
-        <nav class="nav-col">
           <p class="footer-heading">Resources</p>
           <ul class="footer-nav">
-            <li><a class="footer-link" href="#">Help center</a></li>
-            <li><a class="footer-link" href="#">Privacy & terms</a></li>
+            <li><a class="footer-link" href="#cta">Sign up for emails</a></li>
+            <li><a class="footer-link" href="#">About Fire Escape Films</a></li>
             <li><a class="footer-link" href="https://uchicago.webcheckout.net/">Patron Portal</a></li>
             <li><a class="footer-link" href="https://arts.uchicago.edu/logan-center/logan-media-center">Media Center</a></li>
           </ul>
         </nav>
+
       </div>
     </footer>
   </body>
