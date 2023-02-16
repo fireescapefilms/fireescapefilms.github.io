@@ -1,0 +1,67 @@
+---
+layout: default
+title: "Equipment"
+permalink: /equipment/
+---
+
+<div class="top-section equipment-top"></div>
+<section class="section-meals" id="meals">
+        <div class="container center-text">
+          <span class="subheading">Fire Escape Films Equipment</span>
+          <h2 class="heading-secondary">
+            Free to check out at the Logan Center
+          </h2>
+        </div>
+<div class="container">
+    <div class="camera-container">
+    <span class="heading-tertiary">Cameras</span>
+    </div>
+
+    {% assign cameras = site.devices | where: 'type', 'camera' %}
+    {% for camera in cameras %}
+    {% assign remainder = forloop.index | modulo:3 %}
+    {% if remainder == 1 %}
+    <div class="container grid grid--3-cols margin-bottom-md">
+    {% endif %}
+        <div class="meal">
+        <img
+            src="{{ camera.picture }}"
+            class="meal-img"
+            alt="{{camera.name}}"
+        />
+        <div class="meal-content">
+            <div class="meal-tags">
+            <span class="tag tag--vegetarian">Camera</span>
+            </div>
+            <p class="meal-title">{{camera.name}}</p>
+            <ul class="meal-attributes">
+            <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                <span>{{camera.resolution}}</span>
+            </li>
+            <li class="meal-attribute">
+                <ion-icon
+                class="meal-icon"
+                name="restaurant-outline"
+                ></ion-icon>
+                <span>{{camera.color_profile}}</span>
+            </li>
+            <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                <span>{{camera.frame_rates}}</span>
+            </li>
+            </ul>
+        </div>
+        
+        </div>
+        
+        
+    {% if remainder == 0 %}
+    </div>
+    {% endif %}
+    {% endfor %}
+
+
+</div> 
+
+</section>

@@ -1,0 +1,17 @@
+main:
+
+  - title: "Home"
+    url: '/'
+    homeurl: '#'
+
+  # - title: "Get Involved"
+  #   url: '/how'
+  #   homeurl: '#how'
+  
+  - title: "Our Films"
+    url: '/films'
+    homeurl: '#films'
+
+  - title: "Equipment"
+    url: '/equipment'
+    homeurl: '/equipment'

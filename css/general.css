@@ -151,7 +151,7 @@ body {
 .heading-secondary {
   font-size: 4.4rem;
   line-height: 1.2;
-  margin-bottom: 9.6rem;
+  margin-bottom: 3.6rem;
 }
 
 .heading-tertiary {
@@ -289,4 +289,8 @@ body {
 
 strong {
   font-weight: 500;
+}
+
+.camera-container {
+  margin-bottom: 30px;
 }

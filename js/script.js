@@ -36,22 +36,22 @@ allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
     e.preventDefault();
     const href = link.getAttribute("href");
-
+    console.log(href);
     // Scroll back to top
-    if (href === "#")
+    if (href === "#") {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
-      });
-
+      })
+    } 
     // Scroll to other links
-    if (href !== "#" && href.startsWith("#")) {
+    else if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
-    }
-
-    if(href.startsWith("http")) {
-      window.open(href, "_blank");
+    } else if(href.startsWith("http")) {
+      window.open(href, "_blank")
+    } else {
+      window.open(href, "_self")
     }
 
     // Close mobile naviagtion
@@ -63,7 +63,7 @@ allLinks.forEach(function (link) {
 ///////////////////////////////////////////////////////////
 // Sticky navigation
 
-const sectionHeroEl = document.querySelector(".section-hero");
+const sectionHeroEl = document.querySelector(".top-section");
 
 const obs = new IntersectionObserver(
   function (entries) {

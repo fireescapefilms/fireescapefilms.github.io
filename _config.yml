@@ -6,3 +6,13 @@ title: "FE" # the name of your site, e.g. ACME Corp.
 collections:
   carousel:
     output: false
+  devices:
+    output: false
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false

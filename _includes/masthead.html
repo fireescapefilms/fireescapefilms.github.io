@@ -1,0 +1,35 @@
+
+
+ <header class="header">
+    <a href="/">
+    <img class="logo" alt="Fire Escape Films logo" src="/image/fe-logo-white.png" />
+    </a>
+    <nav class="main-nav">
+        <ul class="main-nav-list">
+
+        {% for link in site.data.navigation.main %}
+        {% if link.url contains 'http' %}
+            {% assign domain = '' %}
+            {% else %}
+            {% assign domain = base_path %}
+        {% endif %}
+        {% if page.url == '/' %}
+        <li class="main-nav-item"><a class="main-nav-link" href="{{ link.homeurl }}">{{ link.title }}</a></li>
+        {% else %}
+        <li class="main-nav-item"><a class="main-nav-link" href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endif %}
+        
+        {% endfor %}
+
+        <li><a class="main-nav-link nav-cta" href="/contact">Contact</a></li>
+        </ul>
+
+    </nav>
+      
+
+    <button class="btn-mobile-nav">
+    <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+    <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
+</header>
+
