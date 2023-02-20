@@ -17,7 +17,7 @@ permalink: /equipment/
     <span class="heading-tertiary">Cameras</span>
     </div>
 
-    {% assign cameras = site.devices | where: 'type', 'camera' %}
+    {% assign cameras = site.devices | where: 'type', 'camera' | sort: 'order' %}
     {% for camera in cameras %}
     {% assign remainder = forloop.index | modulo:3 %}
     {% if remainder == 1 %}
@@ -31,23 +31,27 @@ permalink: /equipment/
         />
         <div class="meal-content">
             <div class="meal-tags">
-            <span class="tag tag--vegetarian">Camera</span>
+            {% if camera.access == 'General' %}
+            <span class="tag tag--vegetarian">{{camera.access}}</span>
+            {% elsif camera.access == 'Advanced' %}
+            <span class="tag tag--paleo">{{camera.access}}</span>
+            {% endif %}
             </div>
             <p class="meal-title">{{camera.name}}</p>
             <ul class="meal-attributes">
             <li class="meal-attribute">
-                <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                <ion-icon class="meal-icon" name="expand-outline"></ion-icon>
                 <span>{{camera.resolution}}</span>
             </li>
             <li class="meal-attribute">
                 <ion-icon
                 class="meal-icon"
-                name="restaurant-outline"
+                name="color-palette-outline"
                 ></ion-icon>
                 <span>{{camera.color_profile}}</span>
             </li>
             <li class="meal-attribute">
-                <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                <ion-icon class="meal-icon" name="pulse-outline"></ion-icon>
                 <span>{{camera.frame_rates}}</span>
             </li>
             </ul>
@@ -56,11 +60,100 @@ permalink: /equipment/
         </div>
         
         
-    {% if remainder == 0 %}
+    {% if remainder == 0 or forloop.rindex == 1 %}
     </div>
     {% endif %}
     {% endfor %}
 
+    <div class="camera-container">
+    <span class="heading-tertiary">Lenses</span>
+    </div>
+    <!-- Lenses -->
+    {% assign lenses = site.devices | where: 'type', 'lens' | sort: 'order' %}
+    {% for lens in lenses %}
+    {% assign remainder = forloop.index | modulo:3 %}
+    {% if remainder == 1 %}
+    <div class="container grid grid--3-cols margin-bottom-md">
+    {% endif %}
+        <div class="meal">
+        <img
+            src="{{ lens.picture }}"
+            class="meal-img"
+            alt="{{ lens.name}}"
+        />
+        <div class="meal-content">
+            <div class="meal-tags">
+            {% if lens.access == 'General' %}
+            <span class="tag tag--vegetarian">{{lens.access}}</span>
+            {% elsif lens.access == 'Advanced' %}
+            <span class="tag tag--paleo">{{lens.access}}</span>
+            {% endif %}
+            </div>
+            <p class="meal-title">{{lens.name}}</p>
+            <ul class="meal-attributes">
+            <li class="meal-attribute">
+                <ion-icon
+                class="meal-icon"
+                name="telescope-outline"
+                ></ion-icon>
+                <span>{{lens.focallength}}</span>
+            </li>
+            <li class="meal-attribute">
+                <ion-icon
+                class="meal-icon"
+                name="aperture-outline"
+                ></ion-icon>
+                <span>{{lens.aperture}}</span>
+            </li>
+            <li class="meal-attribute">
+                <span class="meal-icon diameter">∅</span>
+                <span>{{lens.size}}</span>
+            </li>
+            </ul>
+        </div>
+        
+        </div>
+        
+        
+    {% if remainder == 0 or forloop.rindex == 1 %}
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    <div class="camera-container">
+    <span class="heading-tertiary">Lights</span>
+    </div>
+    <!-- Lights -->
+    {% assign lights = site.devices | where: 'type', 'light' | sort: 'order' %}
+    {% for light in lights %}
+    {% assign remainder = forloop.index | modulo:3 %}
+    {% if remainder == 1 %}
+    <div class="container grid grid--3-cols margin-bottom-md">
+    {% endif %}
+        <div class="meal">
+        <img
+            src="{{ light.picture }}"
+            class="meal-img"
+            alt="{{ light.name}}"
+        />
+        <div class="meal-content">
+            <div class="meal-tags">
+            {% if light.access == 'General' %}
+            <span class="tag tag--vegetarian">{{light.access}}</span>
+            {% elsif light.access == 'Advanced' %}
+            <span class="tag tag--paleo">{{light.access}}</span>
+            {% endif %}
+            </div>
+            <p class="meal-title">{{light.name}}</p>
+        </div>
+        
+        </div>
+        
+        
+    {% if remainder == 0 or forloop.rindex == 1 %}
+    </div>
+    {% endif %}
+    {% endfor %}
 
 </div> 
 

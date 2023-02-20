@@ -327,7 +327,7 @@
 .meal-icon {
   height: 2.4rem;
   width: 2.4rem;
-  color: #e67e22;
+  color: #b51515;
 }
 
 .meal-img {
@@ -687,4 +687,8 @@
 
 .equipment-top {
   margin-bottom: 8rem;
+}
+
+.diameter {
+  font-size: 2.8rem; 
 }
