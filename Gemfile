@@ -7,5 +7,8 @@ source "https://rubygems.org"
 gem "jekyll", "~> 3.9"
 gem 'github-pages'
 
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+# group :development do
+#     gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+# end
+
 gem "webrick", "~> 1.8"
