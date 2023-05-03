@@ -302,6 +302,9 @@
 .tag--paleo {
   background-color: #ffd43b;
 }
+.tag--special {
+  background-color: #fd79a8;
+}
 
 .meal-title {
   font-size: 2.4rem;

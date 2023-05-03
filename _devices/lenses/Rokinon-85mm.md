@@ -2,7 +2,7 @@
 order: 13
 type: lens
 name: Rokinon-100mm
-picture: /image/devices/cameras/Rokinon-100mm.jpg
+picture: /image/devices/lenses/Rokinon-100mm.jpg
 size: 77mm
 number: 3
 aperture: f/2.8

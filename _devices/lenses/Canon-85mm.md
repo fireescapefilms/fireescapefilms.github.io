@@ -2,7 +2,7 @@
 order: 22
 type: lens
 name: Canon-85mm
-picture: /image/devices/cameras/Canon-85mm.jpg
+picture: /image/devices/lenses/Canon-85mm.jpg
 size: 52mm
 number: 1
 aperture: f/1.8

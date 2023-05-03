@@ -155,6 +155,45 @@ permalink: /equipment/
     {% endif %}
     {% endfor %}
 
+
+    <div class="camera-container">
+        <span class="heading-tertiary">Camera Supports</span>
+        </div>
+        <!-- Camera Supports -->
+        {% assign supports = site.devices | where: 'type', 'supports' | sort: 'order' %}
+        {% for support in supports %}
+        {% assign remainder = forloop.index | modulo:3 %}
+        {% if remainder == 1 %}
+        <div class="container grid grid--3-cols margin-bottom-md">
+        {% endif %}
+            <div class="meal">
+            <img
+                src="{{ support.picture }}"
+                class="meal-img"
+                alt="{{ support.name}}"
+            />
+            <div class="meal-content">
+                <div class="meal-tags">
+                {% if support.access == 'General' %}
+                <span class="tag tag--vegetarian">{{support.access}}</span>
+                {% elsif support.access == 'Advanced' %}
+                <span class="tag tag--paleo">{{support.access}}</span>
+                {% else %}
+                <span class="tag tag--special">{{support.access}}</span>
+                {% endif %}
+                </div>
+                <p class="meal-title">{{support.name}}</p>
+            </div>
+            
+            </div>
+            
+            
+        {% if remainder == 0 or forloop.rindex == 1 %}
+        </div>
+        {% endif %}
+        {% endfor %}
+
+
 </div> 
 
 </section>
