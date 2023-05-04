@@ -33,7 +33,7 @@ btnNavEl.addEventListener("click", function () {
 const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
+  link.addEventListener("click", async (e) => {
     e.preventDefault();
     const href = link.getAttribute("href");
     console.log(href);
@@ -48,7 +48,12 @@ allLinks.forEach(function (link) {
     else if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
-    } else if(href.startsWith("http")) {
+    } else if(href.startsWith("https://uchicago.webcheckout.net/")) {
+      const newTab = window.open(href, '_blank');
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      newTab.location.href = href;
+    }
+    else if(href.startsWith("http")) {
       window.open(href, "_blank")
     } else {
       window.open(href, "_self")
@@ -159,3 +164,43 @@ checkFlexGap();
   }
 }
 */
+
+
+const devices = document.querySelectorAll('.meal');
+const popup = document.getElementById('popup');
+const close = document.querySelector('.close');
+
+const popupTitle = document.getElementById('popupTitle');
+const popupDescription = document.getElementById('popupDescription');
+const popupPatronButton = document.getElementById('popupPatronButton');
+const popupImage = document.getElementById('popupImage');
+
+function updatePopupInfo(title, description, patronURL, popupImageSrc) {
+  popupTitle.textContent = title;
+  popupDescription.textContent = description;
+  popupPatronButton.href = patronURL;
+  popupImage.src = popupImageSrc;
+}
+
+// Open the pop-up when clicking on the product image
+devices.forEach((device) => {
+  device.addEventListener('click', () => {
+    const title = device.dataset.title;
+    const description = device.dataset.description;
+    const patronURL = device.dataset.patronurl;
+    const imagesrc = device.dataset.imagesrc;
+    updatePopupInfo(title, description, patronURL, imagesrc);
+    popup.style.display = 'block';
+  });
+});
+// Close the pop-up when clicking on the close button
+close.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+// Close the pop-up when clicking outside of the popup-content
+window.addEventListener('click', (event) => {
+  if (event.target === popup) {
+    popup.style.display = 'none';
+  }
+});

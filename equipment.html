@@ -23,7 +23,10 @@ permalink: /equipment/
     {% if remainder == 1 %}
     <div class="container grid grid--3-cols margin-bottom-md">
     {% endif %}
-        <div class="meal">
+        <div class="meal" data-title="{{ camera.name }}"
+        data-description="{{ camera.description }}"
+        data-patronurl="{{ camera.patronURL }}"
+        data-imagesrc="{{camera.picture}}">
         <img
             src="{{ camera.picture }}"
             class="meal-img"
@@ -75,7 +78,10 @@ permalink: /equipment/
     {% if remainder == 1 %}
     <div class="container grid grid--3-cols margin-bottom-md">
     {% endif %}
-        <div class="meal">
+        <div class="meal" data-title="{{ lens.name }}"
+        data-description="{{ lens.description }}"
+        data-patronurl="{{ lens.patronURL }}"
+        data-imagesrc="{{lens.picture}}">
         <img
             src="{{ lens.picture }}"
             class="meal-img"
@@ -130,7 +136,10 @@ permalink: /equipment/
     {% if remainder == 1 %}
     <div class="container grid grid--3-cols margin-bottom-md">
     {% endif %}
-        <div class="meal">
+        <div class="meal" data-title="{{ light.name }}"
+        data-description="{{ light.description }}"
+        data-patronurl="{{ light.patronURL }}"
+        data-imagesrc="{{ light.picture }}">
         <img
             src="{{ light.picture }}"
             class="meal-img"
@@ -166,7 +175,10 @@ permalink: /equipment/
         {% if remainder == 1 %}
         <div class="container grid grid--3-cols margin-bottom-md">
         {% endif %}
-            <div class="meal">
+            <div class="meal" data-title="{{ support.name }}"
+             data-description="{{ support.description }}"
+             data-patronurl="{{ support.patronURL }}"
+             data-imagesrc="{{support.picture}}">
             <img
                 src="{{ support.picture }}"
                 class="meal-img"
@@ -186,13 +198,21 @@ permalink: /equipment/
             </div>
             
             </div>
-            
-            
+                        
         {% if remainder == 0 or forloop.rindex == 1 %}
         </div>
         {% endif %}
         {% endfor %}
 
+        <div class="popup" id="popup">
+            <div class="popup-content">
+              <h2 id="popupTitle">Device Title</h2>
+              <img id="popupImage" class="meal-img"/>
+              <p id="popupDescription">Product description...</p>
+              <a href="#" id="popupPatronButton" class="btn btn--full">Patron Portal</a>
+              <button class="close btn">Close</button>
+            </div>
+        </div>
 
 </div> 
 
