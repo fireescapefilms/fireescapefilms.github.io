@@ -1,7 +1,7 @@
 ---
 order: 13
 type: supports
-name: Atmos External Recording Kit
+name: Atomos External Recording Kit
 picture: /image/devices/supports/atmos-monitor.jpg
 access: Advanced
 patronURL: https://uchicago.webcheckout.net/sso/patron#!/

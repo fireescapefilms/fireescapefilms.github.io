@@ -208,6 +208,45 @@ permalink: /equipment/
         {% endif %}
         {% endfor %}
 
+        <div class="camera-container">
+    <span class="heading-tertiary">Misc</span>
+    </div>
+    <!-- Misc -->
+    {% assign miscs = site.devices | where: 'type', 'misc' | sort: 'order' %}
+    {% for misc in miscs %}
+    {% assign remainder = forloop.index | modulo:3 %}
+    {% if remainder == 1 %}
+    <div class="container grid grid--3-cols margin-bottom-md">
+    {% endif %}
+        <div class="meal" data-title="{{ misc.name }}"
+        data-description="{{ misc.description }}"
+        data-patronurl="{{ misc.patronURL }}"
+        data-imagesrc="{{ misc.picture }}">
+        <img
+            src="{{ misc.picture }}"
+            class="meal-img"
+            alt="{{ misc.name}}"
+        />
+        <div class="meal-content">
+            <div class="meal-tags">
+            {% if misc.access == 'General' %}
+            <span class="tag tag--vegetarian">{{misc.access}}</span>
+            {% elsif misc.access == 'Advanced' %}
+            <span class="tag tag--paleo">{{misc.access}}</span>
+            {% endif %}
+            </div>
+            <p class="meal-title">{{misc.name}}</p>
+        </div>
+        
+        </div>
+        
+        
+    {% if remainder == 0 or forloop.rindex == 1 %}
+    </div>
+    {% endif %}
+    {% endfor %}
+
+
         <div class="popup" id="popup">
             <div class="popup-content">
               <h2 id="popupTitle">Device Title</h2>
