@@ -1,7 +1,7 @@
 ---
 order: 60
 type: lens
-name: SONY-35mm
+name: Sony-35mm
 picture: /image/devices/lenses/SONY-35mm.jpg
 size: 67mm
 number: 1
