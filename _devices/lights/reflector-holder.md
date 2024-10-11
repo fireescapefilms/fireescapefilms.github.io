@@ -1,6 +1,6 @@
 ---
-order: 5
-type: supports
+order: 22
+type: light
 name: Impact Telescopic Collapsible Reflector Holder
 picture: /image/devices/supports/reflector-holder.jpg
 access: General
