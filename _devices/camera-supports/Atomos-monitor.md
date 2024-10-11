@@ -1,5 +1,5 @@
 ---
-order: 13
+order: 51
 type: supports
 name: Atomos External Recording Kit
 picture: /image/devices/supports/atmos-monitor.jpg

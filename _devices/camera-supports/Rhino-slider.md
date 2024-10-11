@@ -1,5 +1,5 @@
 ---
-order: 26
+order: 27
 type: supports
 name: Rhino Camera Gear Slider Pro
 picture: /image/devices/supports/RhinoSlider.jpg

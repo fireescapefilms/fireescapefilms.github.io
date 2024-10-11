@@ -277,6 +277,8 @@ permalink: /equipment/
             <span class="tag tag--vegetarian">{{misc.access}}</span>
             {% elsif misc.access == 'Advanced' %}
             <span class="tag tag--paleo">{{misc.access}}</span>
+            {% else %}
+            <span class="tag tag--special">{{misc.access}}</span>
             {% endif %}
             </div>
             <p class="meal-title">{{misc.name}}</p>
