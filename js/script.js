@@ -1,15 +1,11 @@
-console.log("Hello my friend! If you are interested in helping developing the website, please contact me at fetechdirector@gmail.com. Thank you!");
-
-const myName = "Developed by Yuanjian Liu";
+const prompt = `
+Hello my friend! If you are interested in helping developing the website,
+Please contact us at fetechdirector@gmail.com. Thank you!
+This website is developped by Yuanjian Liu.
+The Github Repo for this website is https://github.com/fireescapefilms/fireescapefilms.github.io
+`
+console.log(prompt);
 const h1 = document.querySelector(".heading-primary");
-console.log(myName);
-console.log(h1);
-
-// h1.addEventListener("click", function () {
-//   h1.textContent = myName;
-//   h1.style.backgroundColor = "red";
-//   h1.style.padding = "5rem";
-// });
 
 ///////////////////////////////////////////////////////////
 // Set current year
@@ -73,7 +69,6 @@ const sectionHeroEl = document.querySelector(".top-section");
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    console.log(ent);
 
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
@@ -106,7 +101,6 @@ function checkFlexGap() {
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
@@ -168,7 +162,6 @@ checkFlexGap();
 
 const devices = document.querySelectorAll('.meal');
 const popup = document.getElementById('popup');
-const close = document.querySelector('.close');
 
 const popupTitle = document.getElementById('popupTitle');
 const popupDescription = document.getElementById('popupDescription');
@@ -182,6 +175,12 @@ function updatePopupInfo(title, description, patronURL, popupImageSrc) {
   popupImage.src = popupImageSrc;
 }
 
+const close = document.querySelector('.close');
+
+const onCloseModal = () => {
+  popup.style.display = 'none';
+};
+
 // Open the pop-up when clicking on the product image
 devices.forEach((device) => {
   device.addEventListener('click', () => {
@@ -191,16 +190,17 @@ devices.forEach((device) => {
     const imagesrc = device.dataset.imagesrc;
     updatePopupInfo(title, description, patronURL, imagesrc);
     popup.style.display = 'block';
+    // Close the pop-up when clicking on the close button
+    close.addEventListener('click', onCloseModal);
   });
 });
-// Close the pop-up when clicking on the close button
-close.addEventListener('click', () => {
-  popup.style.display = 'none';
-});
+
+
 
 // Close the pop-up when clicking outside of the popup-content
 window.addEventListener('click', (event) => {
   if (event.target === popup) {
+    close.removeEventListener('click', onCloseModal);
     popup.style.display = 'none';
   }
 });
