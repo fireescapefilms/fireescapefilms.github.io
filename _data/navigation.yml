@@ -1,17 +1,20 @@
 main:
-
   - title: "Home"
-    url: '/'
-    homeurl: '#'
+    url: "/"
+    homeurl: "#"
 
   # - title: "Get Involved"
   #   url: '/how'
   #   homeurl: '#how'
-  
+
   - title: "Our Films"
-    url: '/films'
-    homeurl: '#films'
+    url: "/films"
+    homeurl: "#films"
 
   - title: "Equipment"
-    url: '/equipment'
-    homeurl: '/equipment'
+    url: "/equipment"
+    homeurl: "/equipment"
+
+  - title: "Film Festival"
+    url: "/film-festival"
+    homeurl: "/film-festival"
