@@ -6,273 +6,260 @@ permalink: /equipment/
 
 <div class="top-section equipment-top"></div>
 <section class="section-meals" id="meals">
-        <div class="container center-text">
-          <span class="subheading">Fire Escape Films Equipment</span>
-          <h2 class="heading-secondary">
-            Free to check out at the Logan Center
-          </h2>
-          <p class="testimonial-text">
-            Please contact <a href="mailto:fetechdirector@gmail.com">fetechdirector@gmail.com</a> for equipment that requires
-            <span style="background-color: #ffd43b; color:black;">ADVANCED</span> or <span style="background-color: #fd79a8; color:black;">SPECIAL</span> authorizations.
-          </p>
-          <p class="testimonial-text">
-            For issues, bugs or inconvenience you encounter on WebCheckout and other tech-related stuff, please report them on <a href="https://github.com/fireescapefilms/fireescapefilms.github.io/issues">Github Issues</a>.
-            Refer to <a href="https://www.yuanjianliu.net/posts/fe-issues/">this guide</a> on how to report them formally. The article takes only 2 minutes to read.
-          </p>
-        </div>
-<div class="container">
+  <div class="container center-text">
+    <span class="subheading">Fire Escape Films Equipment</span>
+    <h2 class="heading-secondary">Free to check out at the Logan Center</h2>
+    <p class="testimonial-text">
+      Please contact
+      <a href="mailto:fetechdirector@gmail.com">fetechdirector@gmail.com</a> for
+      equipment that requires
+      <span style="background-color: #ffd43b; color: black">ADVANCED</span> or
+      <span style="background-color: #fd79a8; color: black">SPECIAL</span>
+      authorizations.
+    </p>
+    <p class="testimonial-text">
+      For issues, bugs or inconvenience you encounter on WebCheckout and other
+      tech-related stuff, please report them on
+      <a
+        href="https://github.com/fireescapefilms/fireescapefilms.github.io/issues"
+        >Github Issues</a
+      >. Refer to
+      <a href="https://www.yuanjianliu.net/posts/fe-issues/">this guide</a> on
+      how to report them formally. The article takes only 2 minutes to read.
+    </p>
+  </div>
+  <div class="container">
     <div class="camera-container">
-    <span class="heading-tertiary">Cameras</span>
+      <span class="heading-tertiary">Cameras</span>
     </div>
 
-    {% assign cameras = site.devices | where: 'type', 'camera' | sort: 'order' %}
-    {% for camera in cameras %}
-    {% assign remainder = forloop.index | modulo:3 %}
-    {% if remainder == 1 %}
+    {% assign cameras = site.devices | where: 'type', 'camera' | sort: 'order'
+    %} {% for camera in cameras %} {% assign remainder = forloop.index |
+    modulo:3 %} {% if remainder == 1 %}
     <div class="container grid grid--3-cols margin-bottom-md">
-    {% endif %}
-        <div class="meal" data-title="{{ camera.name }}"
+      {% endif %}
+      <div
+        class="meal"
+        data-title="{{ camera.name }}"
         data-description="{{ camera.description }}"
         data-patronurl="{{ camera.patronURL }}"
-        data-imagesrc="{{camera.picture}}">
+        data-imagesrc="{{camera.picture}}"
+      >
         <img
-            src="{{ camera.picture }}"
-            class="meal-img"
-            alt="{{camera.name}}"
+          src="{{ camera.picture }}"
+          class="meal-img"
+          alt="{{camera.name}}"
         />
         <div class="meal-content">
-            <div class="meal-tags">
+          <div class="meal-tags">
             {% if camera.access == 'General' %}
             <span class="tag tag--vegetarian">{{camera.access}}</span>
             {% elsif camera.access == 'Advanced' %}
             <span class="tag tag--paleo">{{camera.access}}</span>
             {% endif %}
-            </div>
-            <p class="meal-title">{{camera.name}}</p>
-            <ul class="meal-attributes">
+          </div>
+          <p class="meal-title">{{camera.name}}</p>
+          <ul class="meal-attributes">
             <li class="meal-attribute">
-                <ion-icon class="meal-icon" name="expand-outline"></ion-icon>
-                <span>{{camera.resolution}}</span>
+              <ion-icon class="meal-icon" name="expand-outline"></ion-icon>
+              <span>{{camera.resolution}}</span>
             </li>
             <li class="meal-attribute">
-                <ion-icon
+              <ion-icon
                 class="meal-icon"
                 name="color-palette-outline"
-                ></ion-icon>
-                <span>{{camera.color_profile}}</span>
+              ></ion-icon>
+              <span>{{camera.color_profile}}</span>
             </li>
             <li class="meal-attribute">
-                <ion-icon class="meal-icon" name="pulse-outline"></ion-icon>
-                <span>{{camera.frame_rates}}</span>
+              <ion-icon class="meal-icon" name="pulse-outline"></ion-icon>
+              <span>{{camera.frame_rates}}</span>
             </li>
-            </ul>
+          </ul>
         </div>
-        
-        </div>
-        
-        
-    {% if remainder == 0 or forloop.rindex == 1 %}
+      </div>
+
+      {% if remainder == 0 or forloop.rindex == 1 %}
     </div>
-    {% endif %}
-    {% endfor %}
+    {% endif %} {% endfor %}
 
     <div class="camera-container">
-    <span class="heading-tertiary">Lenses</span>
+      <span class="heading-tertiary">Lenses</span>
     </div>
     <!-- Lenses -->
     {% assign lenses = site.devices | where: 'type', 'lens' | sort: 'order' %}
-    {% for lens in lenses %}
-    {% assign remainder = forloop.index | modulo:3 %}
+    {% for lens in lenses %} {% assign remainder = forloop.index | modulo:3 %}
     {% if remainder == 1 %}
     <div class="container grid grid--3-cols margin-bottom-md">
-    {% endif %}
-        <div class="meal" data-title="{{ lens.name }}"
+      {% endif %}
+      <div
+        class="meal"
+        data-title="{{ lens.name }}"
         data-description="{{ lens.description }}"
         data-patronurl="{{ lens.patronURL }}"
-        data-imagesrc="{{lens.picture}}">
-        <img
-            src="{{ lens.picture }}"
-            class="meal-img"
-            alt="{{ lens.name}}"
-        />
+        data-imagesrc="{{lens.picture}}"
+      >
+        <img src="{{ lens.picture }}" class="meal-img" alt="{{ lens.name}}" />
         <div class="meal-content">
-            <div class="meal-tags">
+          <div class="meal-tags">
             {% if lens.access == 'General' %}
             <span class="tag tag--vegetarian">{{lens.access}}</span>
             {% elsif lens.access == 'Advanced' %}
             <span class="tag tag--paleo">{{lens.access}}</span>
             {% endif %}
-            </div>
-            <p class="meal-title">{{lens.name}}</p>
-            <ul class="meal-attributes">
+          </div>
+          <p class="meal-title">{{lens.name}}</p>
+          <ul class="meal-attributes">
             <li class="meal-attribute">
-                <ion-icon
-                class="meal-icon"
-                name="telescope-outline"
-                ></ion-icon>
-                <span>{{lens.focallength}}</span>
+              <ion-icon class="meal-icon" name="telescope-outline"></ion-icon>
+              <span>{{lens.focallength}}</span>
             </li>
             <li class="meal-attribute">
-                <ion-icon
-                class="meal-icon"
-                name="aperture-outline"
-                ></ion-icon>
-                <span>{{lens.aperture}}</span>
+              <ion-icon class="meal-icon" name="aperture-outline"></ion-icon>
+              <span>{{lens.aperture}}</span>
             </li>
             <li class="meal-attribute">
-                <span class="meal-icon diameter">∅</span>
-                <span>{{lens.size}}</span>
+              <span class="meal-icon diameter">∅</span>
+              <span>{{lens.size}}</span>
             </li>
-            </ul>
+          </ul>
         </div>
-        
-        </div>
-        
-        
-    {% if remainder == 0 or forloop.rindex == 1 %}
+      </div>
+
+      {% if remainder == 0 or forloop.rindex == 1 %}
     </div>
-    {% endif %}
-    {% endfor %}
+    {% endif %} {% endfor %}
 
     <div class="camera-container">
-        <span class="heading-tertiary">Audio Equipment</span>
+      <span class="heading-tertiary">Audio Equipment</span>
+    </div>
+    <!-- Audio -->
+    {% assign devices = site.devices | where: 'type', 'audio' | sort: 'order' %}
+    {% for device in devices %} {% assign remainder = forloop.index | modulo:3
+    %} {% if remainder == 1 %}
+    <div class="container grid grid--3-cols margin-bottom-md">
+      {% endif %}
+      <div
+        class="meal"
+        data-title="{{ device.name }}"
+        data-description="{{ device.description }}"
+        data-patronurl="{{ device.patronURL }}"
+        data-imagesrc="{{ device.picture }}"
+      >
+        <img
+          src="{{ device.picture }}"
+          class="meal-img"
+          alt="{{ device.name}}"
+        />
+        <div class="meal-content">
+          <div class="meal-tags">
+            {% if device.access == 'General' %}
+            <span class="tag tag--vegetarian">{{device.access}}</span>
+            {% elsif device.access == 'Advanced' %}
+            <span class="tag tag--paleo">{{device.access}}</span>
+            {% endif %}
+          </div>
+          <p class="meal-title">{{device.name}}</p>
         </div>
-        <!-- Audio -->
-        {% assign devices = site.devices | where: 'type', 'audio' | sort: 'order' %}
-        {% for device in devices %}
-        {% assign remainder = forloop.index | modulo:3 %}
-        {% if remainder == 1 %}
-        <div class="container grid grid--3-cols margin-bottom-md">
-        {% endif %}
-            <div class="meal" data-title="{{ device.name }}"
-            data-description="{{ device.description }}"
-            data-patronurl="{{ device.patronURL }}"
-            data-imagesrc="{{ device.picture }}">
-            <img
-                src="{{ device.picture }}"
-                class="meal-img"
-                alt="{{ device.name}}"
-            />
-            <div class="meal-content">
-                <div class="meal-tags">
-                {% if device.access == 'General' %}
-                <span class="tag tag--vegetarian">{{device.access}}</span>
-                {% elsif device.access == 'Advanced' %}
-                <span class="tag tag--paleo">{{device.access}}</span>
-                {% endif %}
-                </div>
-                <p class="meal-title">{{device.name}}</p>
-            </div>
-            
-            </div>
-            
-            
-        {% if remainder == 0 or forloop.rindex == 1 %}
-        </div>
-        {% endif %}
-        {% endfor %}
+      </div>
 
-
+      {% if remainder == 0 or forloop.rindex == 1 %}
+    </div>
+    {% endif %} {% endfor %}
 
     <div class="camera-container">
-    <span class="heading-tertiary">Lights</span>
+      <span class="heading-tertiary">Lights</span>
     </div>
     <!-- Lights -->
     {% assign lights = site.devices | where: 'type', 'light' | sort: 'order' %}
-    {% for light in lights %}
-    {% assign remainder = forloop.index | modulo:3 %}
+    {% for light in lights %} {% assign remainder = forloop.index | modulo:3 %}
     {% if remainder == 1 %}
     <div class="container grid grid--3-cols margin-bottom-md">
-    {% endif %}
-        <div class="meal" data-title="{{ light.name }}"
+      {% endif %}
+      <div
+        class="meal"
+        data-title="{{ light.name }}"
         data-description="{{ light.description }}"
         data-patronurl="{{ light.patronURL }}"
-        data-imagesrc="{{ light.picture }}">
-        <img
-            src="{{ light.picture }}"
-            class="meal-img"
-            alt="{{ light.name}}"
-        />
+        data-imagesrc="{{ light.picture }}"
+      >
+        <img src="{{ light.picture }}" class="meal-img" alt="{{ light.name}}" />
         <div class="meal-content">
-            <div class="meal-tags">
+          <div class="meal-tags">
             {% if light.access == 'General' %}
             <span class="tag tag--vegetarian">{{light.access}}</span>
             {% elsif light.access == 'Advanced' %}
             <span class="tag tag--paleo">{{light.access}}</span>
+            {% else %}
+            <span class="tag tag--special">{{light.access}}</span>
             {% endif %}
-            </div>
-            <p class="meal-title">{{light.name}}</p>
+          </div>
+          <p class="meal-title">{{light.name}}</p>
         </div>
-        
-        </div>
-        
-        
-    {% if remainder == 0 or forloop.rindex == 1 %}
-    </div>
-    {% endif %}
-    {% endfor %}
+      </div>
 
+      {% if remainder == 0 or forloop.rindex == 1 %}
+    </div>
+    {% endif %} {% endfor %}
 
     <div class="camera-container">
-        <span class="heading-tertiary">Camera Supports</span>
-        </div>
-        <!-- Camera Supports -->
-        {% assign supports = site.devices | where: 'type', 'supports' | sort: 'order' %}
-        {% for support in supports %}
-        {% assign remainder = forloop.index | modulo:3 %}
-        {% if remainder == 1 %}
-        <div class="container grid grid--3-cols margin-bottom-md">
-        {% endif %}
-            <div class="meal" data-title="{{ support.name }}"
-             data-description="{{ support.description }}"
-             data-patronurl="{{ support.patronURL }}"
-             data-imagesrc="{{support.picture}}">
-            <img
-                src="{{ support.picture }}"
-                class="meal-img"
-                alt="{{ support.name}}"
-            />
-            <div class="meal-content">
-                <div class="meal-tags">
-                {% if support.access == 'General' %}
-                <span class="tag tag--vegetarian">{{support.access}}</span>
-                {% elsif support.access == 'Advanced' %}
-                <span class="tag tag--paleo">{{support.access}}</span>
-                {% else %}
-                <span class="tag tag--special">{{support.access}}</span>
-                {% endif %}
-                </div>
-                <p class="meal-title">{{support.name}}</p>
-            </div>
-            
-            </div>
-                        
-        {% if remainder == 0 or forloop.rindex == 1 %}
-        </div>
-        {% endif %}
-        {% endfor %}
-
-        <div class="camera-container">
-    <span class="heading-tertiary">Misc</span>
+      <span class="heading-tertiary">Camera Supports</span>
     </div>
-    <!-- Misc -->
-    {% assign miscs = site.devices | where: 'type', 'misc' | sort: 'order' %}
-    {% for misc in miscs %}
-    {% assign remainder = forloop.index | modulo:3 %}
-    {% if remainder == 1 %}
+    <!-- Camera Supports -->
+    {% assign supports = site.devices | where: 'type', 'supports' | sort:
+    'order' %} {% for support in supports %} {% assign remainder = forloop.index
+    | modulo:3 %} {% if remainder == 1 %}
     <div class="container grid grid--3-cols margin-bottom-md">
-    {% endif %}
-        <div class="meal" data-title="{{ misc.name }}"
-        data-description="{{ misc.description }}"
-        data-patronurl="{{ misc.patronURL }}"
-        data-imagesrc="{{ misc.picture }}">
+      {% endif %}
+      <div
+        class="meal"
+        data-title="{{ support.name }}"
+        data-description="{{ support.description }}"
+        data-patronurl="{{ support.patronURL }}"
+        data-imagesrc="{{support.picture}}"
+      >
         <img
-            src="{{ misc.picture }}"
-            class="meal-img"
-            alt="{{ misc.name}}"
+          src="{{ support.picture }}"
+          class="meal-img"
+          alt="{{ support.name}}"
         />
         <div class="meal-content">
-            <div class="meal-tags">
+          <div class="meal-tags">
+            {% if support.access == 'General' %}
+            <span class="tag tag--vegetarian">{{support.access}}</span>
+            {% elsif support.access == 'Advanced' %}
+            <span class="tag tag--paleo">{{support.access}}</span>
+            {% else %}
+            <span class="tag tag--special">{{support.access}}</span>
+            {% endif %}
+          </div>
+          <p class="meal-title">{{support.name}}</p>
+        </div>
+      </div>
+
+      {% if remainder == 0 or forloop.rindex == 1 %}
+    </div>
+    {% endif %} {% endfor %}
+
+    <div class="camera-container">
+      <span class="heading-tertiary">Misc</span>
+    </div>
+    <!-- Misc -->
+    {% assign miscs = site.devices | where: 'type', 'misc' | sort: 'order' %} {%
+    for misc in miscs %} {% assign remainder = forloop.index | modulo:3 %} {% if
+    remainder == 1 %}
+    <div class="container grid grid--3-cols margin-bottom-md">
+      {% endif %}
+      <div
+        class="meal"
+        data-title="{{ misc.name }}"
+        data-description="{{ misc.description }}"
+        data-patronurl="{{ misc.patronURL }}"
+        data-imagesrc="{{ misc.picture }}"
+      >
+        <img src="{{ misc.picture }}" class="meal-img" alt="{{ misc.name}}" />
+        <div class="meal-content">
+          <div class="meal-tags">
             {% if misc.access == 'General' %}
             <span class="tag tag--vegetarian">{{misc.access}}</span>
             {% elsif misc.access == 'Advanced' %}
@@ -280,29 +267,23 @@ permalink: /equipment/
             {% else %}
             <span class="tag tag--special">{{misc.access}}</span>
             {% endif %}
-            </div>
-            <p class="meal-title">{{misc.name}}</p>
+          </div>
+          <p class="meal-title">{{misc.name}}</p>
         </div>
-        
-        </div>
-        
-        
-    {% if remainder == 0 or forloop.rindex == 1 %}
+      </div>
+
+      {% if remainder == 0 or forloop.rindex == 1 %}
     </div>
-    {% endif %}
-    {% endfor %}
+    {% endif %} {% endfor %}
 
-
-        <div class="popup" id="popup">
-            <div class="popup-content">
-              <h2 id="popupTitle">Device Title</h2>
-              <img id="popupImage" class="meal-img"/>
-              <p id="popupDescription">Product description...</p>
-              <a href="#" id="popupPatronButton" class="btn btn--full">WebCheckout</a>
-              <button class="close btn">Close</button>
-            </div>
-        </div>
-
-</div> 
-
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <h2 id="popupTitle">Device Title</h2>
+        <img id="popupImage" class="meal-img" />
+        <p id="popupDescription">Product description...</p>
+        <a href="#" id="popupPatronButton" class="btn btn--full">WebCheckout</a>
+        <button class="close btn">Close</button>
+      </div>
+    </div>
+  </div>
 </section>
