@@ -58,11 +58,8 @@ jobs:
           name: jekyll-site
           path: ./_site
 
-      - name: Verify downloaded artifact
-        run: |
-          echo "Contents of downloaded _site:"
-          ls -R ./_site
-
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
