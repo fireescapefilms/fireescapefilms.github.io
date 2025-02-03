@@ -32,7 +32,10 @@ jobs:
         uses: actions/configure-pages@v2
 
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: |
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          echo "Jekyll build completed. Contents of _site:"
+          ls -R ./_site
         env:
           JEKYLL_ENV: production
 
@@ -54,6 +57,11 @@ jobs:
         with:
           name: jekyll-site
           path: ./_site
+
+      - name: Verify downloaded artifact
+        run: |
+          echo "Contents of downloaded _site:"
+          ls -R ./_site
 
       - name: Deploy to GitHub Pages
         id: deployment
