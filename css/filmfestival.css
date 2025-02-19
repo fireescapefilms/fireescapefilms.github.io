@@ -1,0 +1,51 @@
+/* Festival text (main content area) */
+.festival-top {
+  margin-bottom: 3rem;
+}
+
+.festival-text {
+  text-align: left;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+}
+
+.notice-list {
+  list-style: disc inside;
+  padding: 1rem;
+  margin: 1em 0;
+}
+
+.notice-list li {
+  margin: 0.1em 0;
+}
+
+.notice-list li::marker {
+  color: #b51515;
+  font-size: 1.2em;
+}
+
+.festival-text p {
+  margin-bottom: 1.1rem;
+}
+
+.festival-text ul {
+  margin: 0 0 1rem 1.5rem;
+  list-style-type: disc;
+}
+
+/* Subheadings for subsections */
+.festival-text h4 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Iframe for the submission form */
+.submission-form {
+  display: block;
+  width: 100%;
+  height: 600px; /* Adjust as needed */
+  margin-top: 2rem;
+  border: none;
+}
