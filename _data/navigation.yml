@@ -18,3 +18,7 @@ main:
   - title: "Film Festival"
     url: "/film-festival"
     homeurl: "/film-festival"
+
+  - title: "Resources"
+    url: "/resources"
+    homeurl: "/resources"
