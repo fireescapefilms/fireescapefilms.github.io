@@ -1,12 +1,12 @@
-.grid {
+.grid-resources {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 16px;
       padding: 16px;
     }
 
-.box {
-      background: #3498db;
+.box-resources {
+      background: #bbbbbb;
       color: white;
       height: 200px;
       display: flex;
@@ -17,7 +17,7 @@
       width: 100%;
     }
 
-.box:hover {
+.box-resources:hover {
       transform: scale(1.05);
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
       z-index: 2;
