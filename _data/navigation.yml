@@ -7,18 +7,22 @@ main:
   #   url: '/how'
   #   homeurl: '#how'
 
-  - title: "Our Films"
-    url: "/films"
-    homeurl: "#films"
+ # - title: "Our Films"
+ #   url: "/films"
+ #   homeurl: "#films"
 
   - title: "Equipment"
     url: "/equipment"
     homeurl: "/equipment"
 
-  - title: "Film Festival"
-    url: "/film-festival"
-    homeurl: "/film-festival"
+  #- title: "Film Festival"
+  #  url: "/film-festival"
+  #  homeurl: "/film-festival"
 
-  - title: "Resources"
-    url: "/resources"
-    homeurl: "/resources"
+  - title: "Filmmaking"
+    url: "/filmmaking"
+    homeurl: "/filmmaking"
+
+  - title: "Committee"
+    url: "/committee"
+    homeurl: "/committee"
