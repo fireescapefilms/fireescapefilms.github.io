@@ -737,4 +737,53 @@
 }
 
 
+/* General Body Styles */
+body {
+  font-family: Rubik, sans-serif;
+  color: rgb(85, 85, 85);
+  font-size: 1.8rem;
+}
+
+/* Sections */
+.section-meals {
+  text-align: center;
+}
+
+.project-info {
+  text-align: start;
+}
+
+/* Container and Text Classes */
+.container {
+  max-width: 120rem; /* or whatever width you prefer */
+  margin: 0 auto; /* centers the container */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.project-text {
+  text-align: left;
+}
+
+.black-text {
+  color: black;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+/* Lists */
+.project-list {
+  color: black;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  list-style-type: lower-roman; /* applied to parent ol */
+}
+
+.project-list li {
+  line-height: 1.5;
+}
+
+
 
