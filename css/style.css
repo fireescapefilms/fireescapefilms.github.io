@@ -695,3 +695,45 @@
 .diameter {
   font-size: 2.8rem;
 }
+
+/**************************/
+/* TABLEs */
+/**************************/
+
+
+
+/* Styling for the entire table */
+.film-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.8rem;
+}
+
+/* Styling for all table cells (td) */
+.film-table td {
+  border: 1px solid black;
+  padding: 0.5rem; /* Small space before and after content */
+}
+
+/* Styling for the header row cells */
+.film-table th,
+.film-table .header-cell {
+  background-color: rgb(181, 21, 21);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+/* Specific styling for the last row that spans all columns */
+.film-table .footer-cell {
+  text-align: center;
+  font-size: 1.2rem; /* Adjusted for better readability */
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+}
+
+
+
