@@ -15,10 +15,6 @@ main:
     url: "/equipment"
     homeurl: "/equipment"
 
-  - title: "DFF"
-    url: "/film-festival"
-    homeurl: "/film-festival"
-
   - title: "Filmmaking"
     url: "/filmmaking"
     homeurl: "/filmmaking"
@@ -26,3 +22,7 @@ main:
   - title: "Committee"
     url: "/committee"
     homeurl: "/committee"
+
+  - title: "DFF"
+    url: "/film-festival"
+    homeurl: "/film-festival"
