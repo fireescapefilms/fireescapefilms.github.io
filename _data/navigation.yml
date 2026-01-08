@@ -15,9 +15,9 @@ main:
     url: "/equipment"
     homeurl: "/equipment"
 
-  #- title: "Film Festival"
-  #  url: "/film-festival"
-  #  homeurl: "/film-festival"
+  - title: "DFF"
+    url: "/film-festival"
+    homeurl: "/film-festival"
 
   - title: "Filmmaking"
     url: "/filmmaking"
