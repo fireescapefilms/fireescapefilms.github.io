@@ -1,4 +1,4 @@
-# Fire Escape Films
+# Fire Escape Films Website
 
 This project is maintained by students at the University of Chicago who are passionate about filmmaking. The website helps people understand what productions we currently work on and what films we have made in the past. It also serves as an assistant tool for students to confirm what equipment they need and what on-campus resources they can use. We aim to provide a comprehensive list of available equipment/resources at the Cage. You can access the website [here](https://fireescapefilms.org/).
 
